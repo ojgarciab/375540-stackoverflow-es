@@ -1,0 +1,11 @@
+tasks:
+- name: Java
+  command: >
+    echo "";
+    echo "Cosas que puedes hacer en este terminal:";
+    echo " * javac Pruebas.java";
+    echo " * java Pruebas";
+- name: Programa
+  command: >
+    javac Pruebas.java;
+    java Pruebas

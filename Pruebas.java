@@ -54,12 +54,27 @@ public class Pruebas {
     }
 
     public static void main(String args[]) {
-        for (daoF.numFI = -3; daoF.numFI <= 3; daoF.numFI++) {
-            for (daoF.numFA = -3; daoF.numFA <= 3; daoF.numFA++) {
-                System.out.printf("numFI: %+02d, numFA: %+02d: ", daoF.numFI, daoF.numFA);
-                System.out.printf("obtenerNum: %+02d, ", obtenerNum());
-                System.out.printf("obtenerNum_Oscar: %+02d, ", obtenerNum_Oscar());
-                System.out.printf("sumarUnoAlNumeroMayor: %+02d, ", sumarUnoAlNumeroMayor());
+        long obtenerNum, obtenerNum_Oscar, sumarUnoAlNumeroMayor;
+        for (daoF.numFI = -2; daoF.numFI <= 2; daoF.numFI++) {
+            for (daoF.numFA = -2; daoF.numFA <= 2; daoF.numFA++) {
+                System.out.printf(
+                    "numFI: %+02d, numFA: %+02d: ",
+                    daoF.numFI, daoF.numFA
+                );
+                System.out.printf(
+                    "obtenerNum: %+02d, ",
+                    obtenerNum = obtenerNum()
+                );
+                System.out.printf(
+                    "obtenerNum_Oscar: %+02d [%s], ",
+                    obtenerNum_Oscar = obtenerNum_Oscar(),
+                    obtenerNum == obtenerNum_Oscar ? " " : "X"
+                );
+                System.out.printf(
+                    "sumarUnoAlNumeroMayor: %+02d [%s]",
+                    sumarUnoAlNumeroMayor = sumarUnoAlNumeroMayor(),
+                    obtenerNum == sumarUnoAlNumeroMayor ? " " : "X"
+                );
                 System.out.println();
             }
         }
